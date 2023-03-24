@@ -1,1 +1,800 @@
-<p>Our page is on the way...</p>
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <style>
+    .happy{
+      width: 800px;
+      margin: 30px;
+      /* border:solid 1px gray; */
+      overflow: hidden; /* 避免長方框下面顯示不正常 */
+      
+    }
+    .bdcard{
+      width: 300px;
+      float:left; /* 圖片在左邊 */
+      padding: 20px;
+    }
+    .bdcard img{
+      display: block;
+      width:200px;
+    }
+    .bdtext{
+      float: right;  /* 文字在右邊 */
+      width: 460px;
+      padding: 40px 0px 0px 0px;
+    }
+    .bdtext_cap{
+          width: 430px;
+        }
+    
+    .circleImg{
+      border: black;
+      border-style: solid;
+      border-radius: 60px;
+      width:120px;
+      height:120px;
+
+}
+
+
+  
+  </style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>New Frontiers in Visual Language Reasoning:
+    Compositionality, Prompts and Causality</title>
+  <meta name="description" content="Catch UAVs that Want to Watch You ---">
+
+  <!--Open Graph Related Stuff-->
+  <meta property="og:title" content="1st Anti-UAV Challenge" />
+  <meta property="og:url" content="https://Anti-UAV.github.io/" />
+  <meta property="og:description" content="Catch UAVs that Want to Watch You ---" />
+  <meta property="og:site_name" content="Anti-UAV" />
+  <meta property="og:image" content="" />
+  <meta property="og:image:url" content="" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="./css/main.css">
+  <link rel="stylesheet" type="text/css" href="./css/animate.min.css">
+  <!--<link rel="stylesheet" type="text/css" href="/css/font-awesome.css">-->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="./css/lineabasic.css">
+  <link rel="stylesheet" type="text/css" href="./css/magnific-popup.css">
+  <link rel="stylesheet" type="text/css" href="./css/style.css">
+  <link rel="stylesheet" type="text/css" href=".//home.css">
+
+</head>
+<body>
+
+
+
+  
+  <!-- <nav class="navbar">
+    <div class="container">
+      <div class="row">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+            data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a target="_blank" href="https://cvpr.thecvf.com/">
+            <img src="./img/CVPR2023logo.png" alt="FOLIO LOGO" style=" height:75px;" />
+          </a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav navbar-right" style="padding-top:10px;">
+            <li><a href="/">Home</a></li>
+            <li><a href="/schedule">Schedule</a></li>
+            <li><a href="/speakers">Speakers</a></li>
+            <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown">Challenge <span
+                  class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="/Evaluate" target="_blank">EVALUATE</a></li>
+                <li><a href="/dataset" target="_blank">DATASET</a></li>
+                <li><a href="/leaderboard" target="_blank">LEADERBOARD</a></li>
+                <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown">LEADERBOARD<span
+                      class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="/leaderboard" target="_blank">Leaderboard of the 1st Anti-UAV</a></li>
+                    <li><a href="/leaderboard2" target="_blank">Leaderboard of the 2nd Anti-UAV</a></li>
+                    <li><a href="/leaderboard3" target="_blank">Leaderboard of the 3rd Anti-UAV</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li><a href="/submission">Submission</a></li>
+            <li><a href="/organizers">Organizers</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav> -->
+
+  <div class="container">
+    <div class="page-content">
+
+      <p><br /></p>
+      <style type="text/css">
+        * {
+          margin: 0px;
+          padding: 0px;
+        }
+
+        div {
+          position: relative;
+        }
+
+        div w {
+          position: absolute;
+          right: 40px;
+          top: 60px;
+          color: white;
+        }
+      </style>
+      <div>
+        <img src="./img/bgc.jpg" style="width:100%; min-height:200px;" />
+        <font size="6"><strong>
+            <w style="line-height:0.8; text-align: right; margin-top: 392px; margin-left: 50px; margin-right: 50px"> 
+              New 
+              Frontiers in Visual Language Reasoning:<pr /></w>
+          </strong></font>
+
+        <font size="8"><strong>
+          <w style="line-height:0.8; text-align: center; margin-top: 400px"><br> Compositionality, Prompts and Causality <br /></w>
+        </strong></font>
+          
+        <font size="6">
+          <w style="margin-top: 382px"><br><br><br><br><br>Morning, Jun 18th, Sun, 2023 CVPR<br /><br /><br /><br /><br /></w>
+        </font>
+
+      </div>
+      <p><br /></p>
+
+      
+      <div class="row">
+        <div class="col-xs-12">
+            <p> Recent years have seen the stunning powers of Visual Language Pre-training (VLP) models. 
+              Although VLPs have revolutionalized some fundamental principles of visual language reasoning (VLR), 
+              the other remaining problems prevent them from “thinking” like a human being: 
+              how to reason the world from breaking into parts (compositionality), 
+              how to achieve the generalization towards novel concepts provided a glimpse of demonstrations in context (prompts), 
+              and how to debias visual language reasoning by imagining what would have happened in the counterfactual scenarios (causality). 
+            </p>
+            
+            <p>
+              The workshop provides the opportunity to gather researchers from different fields to review the technology trends of the three lines, 
+              to better endow VLPs with these reasoning abilities. Our workshop also consists of two multi-modal reasoning challenges under the backgrounds of cross-modal math-word calculation and proving problems. </strong>
+              The challenges are practical and highly involved with our issues, therefore, shedding more insights into the new frontiers of visual language reasoning.
+            </p>
+          
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-12">
+          <h2><b>Topics</b></h2>
+        </div>
+      </div>
+
+      <p><br /></p>
+      <style type="text/css">
+        * {
+          margin: 0px;
+          padding: 0px;
+        }
+
+        div {
+          position: relative;
+        }
+
+        div w {
+          position: absolute;
+          right: 40px;
+          top: 60px;
+          color: white;
+        }
+      </style>
+      <div>
+        <img src="./img/vl_topics.jpeg" style="width:100%; min-height:200px" />
+      </div>
+      <p><br /></p>
+
+
+      <!-- <div class="row">
+        <div class="col-xs-12">
+          <h2><b>Topics</b></h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <ul style=“list-style-type:square”><font size="4">
+            <b><li style="margin-left: 20px;"> Large-scale visual-language pretraining (VLP) and reasoning (VLR).</li></b>
+            <br>
+            <b><li style="margin-left: 20px;"> How VLP and VLR are connected with compositionality, prompts and causality. </li></b>
+            <br>
+            <b><li style="margin-left: 20px;"> Causal inference theory, algorithms and models applied for vision-language. </li></b>
+            <br>
+            <b><li style="margin-left: 20px;"> Prompt engineering, tuning and other prompting methods for vision-language. </li></b>
+            <br>
+            <b><li style="margin-left: 20px;"> Compositional representation learning for vision-language. </li></b>
+            <br>
+            <b><li style="margin-left: 20px;"> The relationships and interplay among compositionality, prompts and causalit. </li></b>
+            <br>
+            <b><li style="margin-left: 20px;"> New benchmarks that evaluate vision-language reasoning in terms of compositionality and causality. </li></b>
+            
+          </font></ul>
+        </div>
+      </div>
+      <p><br /></p> -->
+      <div class="row">
+        <div class="col-xs-12">
+        
+          <div class="row" id="call">
+            <div class="col-xs-12">
+              <br /><br /><br />
+              <h1><b>Call for Papers</b></h1>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-12">
+              <!-- <p><h3><strong>Important Dates</strong></h3></p>
+              <ul>
+                <li class='uili'><strong>Paper Submission Deadline:</strong> April 8, 2023 (11:59PM EDT)</li>
+                <li class='uili'><strong>Notification of Acceptance:</strong> April 12, 2023 (11:59PM EDT)</li>
+                <li class='uili'><strong>Camera-Ready Submission Deadline Due:</strong> April 14, 2023 (11:59PM EDT)</li>
+              </ul> -->
+              <br>
+              <table style="margin: 0 auto; width: 100%; line-height: 2;">
+                <thead>
+                  <tr style="background-color: lightblue;">
+                    <th style="padding-left: 20px;">Workshop Event</th>
+                    <th style="padding-left: 20px;">Date</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td style="padding-left: 20px;">Submission Deadline</td>
+                    <td style="padding-left: 20px;">April 8, 2023 (11:59PM EDT)</td>
+                  </tr>
+                  <tr style="background-color: #f2f2f2;">
+                    <td style="padding-left: 20px;">Notification of Acceptance</td>
+                    <td style="padding-left: 20px;">April 12, 2023 (11:59PM EDT)</td>
+                  </tr>
+                  <tr>
+                    <td style="padding-left: 20px;">Camera-Ready Submission Deadline Due</td>
+                    <td style="padding-left: 20px;">April 14, 2023 (11:59PM EDT)</td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <p>
+                <br><br>
+                This workshop pays more attention to their limitations of existing notions on <strong>Compositionality, 
+                Prompts, and Causality</strong>. In the sense of visual language reasoning, <strong>compositionality</strong> demonstrates how human represents and organizes visual events for reasoning
+                better; <strong>prompt-based methods</strong> build a cross-modal bridge to leverage a large language model for reasoning on new visual
+                concepts in a vocabulary; and <strong>causality</strong> prevents the chain of reasoning from spurious features and other confounding factors. They are very important whereas have seldom been
+                investigated together and worked out in VLPs, <strong>covering a non-exhaustive list of topics</strong> such as:
+              </p>
+            </div>
+          </div>
+          <div class="row", style="margin-left: auto; margin-top: -40px;">
+            <p>
+            <ul>
+              <li class='uili'> Large-scale visual-language pretraining (VLP) models, visual-language representation learning and reasoning (VLR) (Especially, how VLP and VLR are connected with compositionality, prompts and causality);</li>
+              <li class='uili'> Causal inference theory, algorithms and models applied for vision, language, and vision-language area;</li>
+              <li class='uili'> Prompt engineering, tuning and other prompting methods for vision, language, and vision-language area;</li>
+              <li class='uili'> Compositional representation learning for vision, language, and vision-language area;</li>
+              <li class='uili'> The relationships and interplay among compositionality, prompts and causality;</li>
+              <li class='uili'> New benchmarks that evaluate vision-language reasoning in terms of compositionality and causality</li>
+            </ul>
+            </p>
+          </div>
+
+        <div class="row" id="intro">
+          <div class="col-xs-12">
+            <h1><b>Geometric-MPS Challenge</b></h1>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-xs-12">
+            <p>Geometry math-word problem solving (MPS) is a classic cross-modal reasoning problem composed of text and diagram input, promoting challenging multi-modal 
+              numerical reasoning tasks. Our workshop challenge includes two competition tracks about solving plane-geometriy MPS problems based on calculation
+              and proving tasks. It encourages the community to develop reasoning algorithms for geometry MPS problems. To this, the challenge does not encourage the 
+              usage of gigantic large language pre-training systems and particulary, forbid the implementation of Wolfram and other comparable softwares. 
+              For a fairly evaluating the reasoning abilities across all candidates, we only release the train and val datasets for the compeitions, and our test dataset
+              would be kept under wrap in the online evaluation server until the challenge finished. The codes and pre-trained candidate models should be submitted and 
+              evaluated online by our evaluation server.
+              <br></p>
+              Our competition website is coming with our online evaluation service and more details, would be avaiable in the next week.
+            <br /><br></p><br />
+            <!-- <div style="">
+            <div style="padding: 30px;">
+            <h3><p>
+              <strong>Challenge1: Geometric-MPS Challenge</strong> (Geometric math-word problem solving challenge)
+            </p></h3>
+            <p>
+              <strong>Problem:</strong> 
+            </p>
+
+            <p>
+              <strong>Benchmark:</strong> 
+            </p>
+          </div></div> -->
+
+
+          <div style="padding: 60px; border: solid 1px gray;">
+            <!-- <p>
+              <strong>Problem:</strong>             <br /></p> -->
+            
+            <!-- <div class="happy" style="margin-left: 0px; margin-right: -0px; margin-bottom: -20px;">
+              <div class="bdcard" style="margin-left: 30px; ">
+                <img src="img/math.jpg" alt="" />
+              </div>
+
+              <h4><font size="4">Track-1: Geometric-MPS Calculation (Up-coming)</font></h4>
+              <p>
+                This track is derived from GeoQA benchmark (<a style="color: blue;" href="https://aclanthology.org/2021.findings-acl.46.pdf">https://aclanthology.org/2021.findings-acl.46.pdf</a>) 
+                 containing 4,998 geometry problems from real math exams in middle school, data in which are annotated with execution program sequence for assisting neural-symbolic prediction. 
+                 Besides, we further collect extra 9000+ geometry problems from the original source without execution
+                 program annotation, and divide them into train and test parts. The train part would be combined with GeoQA to construct the training set for Track-1, 
+                 then the test part would be saved in our server for online model evaluation. The task goal is to answer a seres of single-choice questions in the test 
+                 bank. 
+              </p>
+            </div> -->
+              <!-- <div class="bdtext_cap">
+                <p>Figure 1: examples of FFA images.</p>
+              </div> -->
+              
+              <!-- <div class="happy">
+    
+              </div> -->
+
+            <!-- <div class="happy" style="margin-left: -10px; ">
+              <div class="bdcard" style="margin-left: 0px; margin-right: 0px; margin-bottom: -20px;">
+                <img src="img/math2.jpg" alt="" />
+              </div>
+              <h4><font size="4">Track-2: Geometric-MPS Proving (Up-coming)</font></h4>
+              <p style="margin-right: 25px;">
+                This track is derived from UniGeo benchmark (<a style="color: rgb(255, 0, 102);" href="https://github.com/chen-judge/unigeo">https://github.com/chen-judge/unigeo</a>) with 4,998 calculation MPS instances consistent with GeoQA
+                and extra 9,543 proving MPS instances. The task goal is to generate a consistent proving sequence for each MPS proving problem. Beyond the UniGeo data, 
+                we additionally crawl with more than 60,000 proving instances, which consist of more diverse and more complicated MPS proving chains. Similar with Track-1,
+                we divide them into train and test parts, where the train part would be combined with UniGeo to construct the training set, 
+                then the test part would be saved in our server for online model evaluation.                  
+              </p>
+            </div> -->
+
+            <h4><font size="5">Track-1: Geometric-MPS Calculation (Up-coming)</font></h4>
+            <div style="display: flex; align-items: center;">
+              <img src="img/math.jpg" alt="math" style="width: 50%; max-width: 250px; margin-right: 30px;">
+              <p style="flex: 2;">
+                This track is derived from GeoQA benchmark (<a style="color: blue;" href="https://aclanthology.org/2021.findings-acl.46.pdf">https://aclanthology.org/2021.findings-acl.46.pdf</a>) 
+                containing 4,998 geometry problems from real math exams in middle school, data in which are annotated with execution program sequence for assisting neural-symbolic prediction. 
+                Besides, we further collect extra 9000+ geometry problems from the original source without execution
+                program annotation, and divide them into train and test parts. The train part would be combined with GeoQA to construct the training set for Track-1, 
+                then the test part would be saved in our server for online model evaluation. The task goal is to answer a seres of single-choice questions in the test 
+                bank. 
+              <br><br></p>
+            </div>
+
+
+            <h4><font size="5">Track-2: Geometric-MPS Proving (Up-coming)</font></h4>
+            <div style="display: flex; align-items: center; flex-direction: row-reverse;;">
+              
+              <img src="img/math2.jpg" alt="math" style="width: 50%; max-width: 300px; margin-left: 30px;">
+              <p style="flex: 1;">This track is derived from UniGeo benchmark (<a style="color: rgb(255, 0, 102);" href="https://github.com/chen-judge/unigeo">https://github.com/chen-judge/unigeo</a>) with 4,998 calculation MPS instances consistent with GeoQA
+                and extra 9,543 proving MPS instances. The task goal is to generate a consistent proving sequence for each MPS proving problem. Beyond the UniGeo data, 
+                we additionally crawl with more than 60,000 proving instances, which consist of more diverse and more complicated MPS proving chains. Similar with Track-1,
+                we divide them into train and test parts, where the train part would be combined with UniGeo to construct the training set, 
+                then the test part would be saved in our server for online model evaluation.     </p>
+            </div>
+            
+          </div>
+
+
+
+            <p><br /></p>
+
+<!-- 
+            <div class="row">
+              <div class="col-md-12" style="text-align: left; margin-left: 18px;">
+                <img src="img/ffa.png" style="max-width: 200px; "/>
+              </div>
+            </div>
+            <p style="text-align: left">Figure 1: examples of FFA images.</p>
+            <p></p> -->
+
+            <!-- <p>
+              <strong>Benchmark:</strong> 
+            </p> -->
+          </div>
+          <div class="col-xs-12">
+            <br />
+            <br />
+            
+
+            <!-- <p><h3><strong>Important Dates</strong></h3></p>
+            <ul> 
+              <li class='uili'><strong>Competition site online:</strong> March 28, 2023 (11:59PM EDT)</li>
+              <li class='uili'><strong>Release of train data:</strong> March 28, 2023 (11:59PM EDT)</li>
+              <li class='uili'><strong>Validation server online:</strong> March 31, 2023 (11:59PM EDT)</li>
+              <li class='uili'><strong>Validation set update:</strong> May 6, 2023 (11:59PM EDT)</li>
+              <li class='uili'><strong>Validation set final update:</strong> May 30, 2023 (11:59PM EDT)</li>
+              <li class='uili'><strong>Test phase submission deadline, validation server close:</strong> June 10, 2023 (11:59PM EDT)</li>
+              <li class='uili'><strong>Preliminary test results release to the participants</strong> June 12, 2023 (11:59PM EDT)</li>
+            </ul> -->
+
+            <table style="margin: 0 auto; width: 100%; line-height: 2">
+              <thead>
+                <tr style="background-color: lightblue;">
+                  <th style="padding-left: 20px;">Challenge Event</th>
+                  <th style="padding-left: 20px;">Date</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="padding-left: 20px;">Competition site online</td>
+                  <td style="padding-left: 20px;">March 28, 2023 (11:59PM EDT)</td>
+                </tr>
+                <tr style="background-color: #f2f2f2;">
+                  <td style="padding-left: 20px;">Release of train data</td>
+                  <td style="padding-left: 20px;">March 28, 2023 (11:59PM EDT)</td>
+                </tr>
+                <tr>
+                  <td style="padding-left: 20px;">Validation server online</td>
+                  <td style="padding-left: 20px;">March 31, 2023 (11:59PM EDT)</td>
+                </tr>
+                <tr style="background-color: #f2f2f2;">
+                  <td style="padding-left: 20px;">Validation set update</td>
+                  <td style="padding-left: 20px;">May 6, 2023 (11:59PM EDT)</td>
+                </tr>
+                <tr>
+                  <td style="padding-left: 20px;">Validation set final update</td>
+                  <td style="padding-left: 20px;">May 30, 2023 (11:59PM EDT)</td>
+                </tr>
+                <tr style="background-color: #f2f2f2;">
+                  <td style="padding-left: 20px;">Test phase submission deadline, validation server close</td>
+                  <td style="padding-left: 20px;">June 10, 2023 (11:59PM EDT)</td>
+                </tr>
+                <tr>
+                  <td style="padding-left: 20px;">Preliminary test results release to the participants</td>
+                  <td style="padding-left: 20px;">June 12, 2023 (11:59PM EDT)</td>
+                </tr>
+              </tbody>
+            </table>
+            
+            
+            
+          </div>
+          
+          </div>
+
+
+
+        
+
+        <!-- <div class="row">
+          <div class="col-md-12">
+            <img src="img/Fig1.png" />
+          </div>
+        </div>
+        <p style="text-align: center">Figure 1 Examples of UAV-related incidents.</p>
+        <p><br /></p>
+
+        <div class="row">
+          <div class="col-md-12">
+            <img src="img/Figure2.jpg" />
+          </div>
+        </div>
+        <p style="text-align: center">Figure 2 A map illustrating the worldwide drone incidents (courtesy of Dedrone®).</p>
+        <p><br /></p>
+
+        <div class="grade">
+          <span class='span1'>a</span>
+          <span class='span2'>b</span>
+          <span class='span3'>c</span>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <img src="1.png" />
+          </div>
+        </div>
+        <p style="text-align: center">Figure 3 Illustrations of civil UAVs. (a) Large civil UAV; (b) Small civil UAV;
+          (c) Tiny civil UAV.</p>
+        <p><br /></p>
+
+        <div class="row">
+          <div class="col-md-12">
+            <img src="img/Figure4.jpg" />
+          </div>
+        </div>
+        <p style="text-align: center">Figure 4 Examples of backgrounds and targets in the dataset.</p>
+        <p><br /></p> -->
+
+        <!-- <p><br /></p> -->
+
+        <div class="row" id="org">
+          <div class="col-xs-12">
+            <br /><br />
+            <h1><b>Organizers</b></h1>
+            <br /><br />
+          </div>
+        </div>
+        
+
+
+        <div class="row" id="org" style="margin-left: 80px;">
+
+
+        <div class="col" style="display: inline-block; width: 150px; height: 150px;">
+          <div class="circleImg">
+            <img src="img/Liang Lin.jpg" style="border-radius: 60px; text-align: center; caption-side: bottom;">
+            <caption style="display: inline-block; ">
+              <p style="text-align: center;"> Liang <br />Lin</p> 
+            </caption>
+          </div>
+        </div>
+
+        <div class="col" style="display: inline-block; width: 150px; height: 150px;">
+          <div class="circleImg">
+            <img src="img/Vicente Ordonez.jpeg" style="border-radius: 60px; text-align: center; caption-side: bottom;">
+            <caption style="display: inline-block; text-align: center;">
+              <p style="text-align: center;"> Vicente Ordonez</p> 
+            </caption>
+
+            <!-- <div class="text" style="text-align: center; width: 20px;">
+              <p>wqeddsadaswdddddddddddddddddsadsadasdewq </p>
+            </div> -->
+
+          </div>
+        </div>
+
+
+        <div class="col" style="display: inline-block; width: 150px; height: 150px;">
+          <div class="circleImg">
+            <img src="img/Guangrun Wang.jpg" style="border-radius: 60px; text-align: center; caption-side: bottom;">
+            <caption style="display: inline-block; ">
+              <p style="text-align: center;"> Guangrun Wang</p> 
+            </caption>
+
+          </div>
+        </div>
+
+
+        <div class="col" style="display: inline-block; width: 150px; height: 150px;">
+          <div class="circleImg">
+            <img src="img/Ziliang Chen.jpg" style="border-radius: 60px; text-align: center; caption-side: bottom;">
+            <caption style="display: inline-block; ">
+              <p style="text-align: center;"> Ziliang <br />Chen</p> 
+            </caption>
+          </div>
+        </div>
+
+
+        <div class="col" style="display: inline-block; width: 150px; height: 150px;">
+          <div class="circleImg">
+            <img src="img/Hao Wang.jpeg" style="border-radius: 60px; text-align: center; caption-side: bottom;">
+            <caption style="display: inline-block; ">
+              <p style="text-align: center;"> Hao <br />Wang</p> 
+            </caption>
+          </div>
+        </div>
+
+        <div class="col" style="display: inline-block; width: 150px; height: 150px;">
+          <div class="circleImg">
+            <img src="img/Tianlu Wang.jpeg" style="border-radius: 60px; text-align: center; caption-side: bottom;">
+            <caption style="display: inline-block; ">
+              <p style="text-align: center;"> Tianlu <br />Wang</p> 
+            </caption>
+          </div>
+        </div>
+
+
+        <div class="col" style="display: inline-block; width: 150px; height: 150px;">
+          <div class="circleImg">
+            <img src="img/Xiaodan Liang.jpg" style="border-radius: 60px; text-align: center; caption-side: bottom;">
+            <caption style="display: inline-block; ">
+              <p style="text-align: center;"> Xiaodan <br />Liang</p> 
+            </caption>
+          </div>
+        </div>
+        
+
+        <div class="col" style="display: inline-block; width: 150px; height: 150px;">
+          <div class="circleImg">
+            <img src="img/Alan Yuille.jpg" style="border-radius: 60px; text-align: center; caption-side: bottom;">
+            <caption style="display: inline-block; ">
+              <p style="text-align: center;">  Alan <br />Yuille</p> 
+            </caption>
+          </div>
+        </div>
+
+        </div>
+
+
+
+
+
+        
+
+
+        <div class="row" id="org">
+          <div class="col-xs-12">
+            <br /><br />
+            <h1><b>Invited speakers</b></h1>
+            <br /><br />
+          </div>
+        </div>
+
+
+        <div class="row" id="org" style="margin-left: 80px;">
+        <div class="col" style="display: inline-block; width: 150px; height: 150px;">
+          <div class="circleImg">
+            <img src="img/Elias Bareinboim.jpeg" style="border-radius: 60px; text-align: center; caption-side: bottom;">
+            <caption style="display: inline-block; text-align: center;">
+              <p style="text-align: center;"> 
+                <a style="color: black;" href="https://causalai.net/">Elias Bareinboim</a>
+              </p> 
+            </caption>
+
+            <!-- <div class="text" style="text-align: center; width: 20px;">
+              <p>wqeddsadaswdddddddddddddddddsadsadasdewq </p>
+            </div> -->
+
+          </div>
+        </div>
+
+
+        <div class="col" style="display: inline-block; width: 150px; height: 150px;">
+          <div class="circleImg">
+            <img src="img/Ranjay Krishna.jpeg" style="border-radius: 60px; text-align: center; caption-side: bottom;">
+            <caption style="display: inline-block; ">
+              <p style="text-align: center;"> 
+                <a style="color: black;" href="https://ranjaykrishna.com">Ranjay <br />Krishna</a>
+              </p> 
+            </caption>
+
+          </div>
+        </div>
+
+
+        <div class="col" style="display: inline-block; width: 150px; height: 150px;">
+          <div class="circleImg">
+            <img src="img/Hanwang Zhang.jpg" style="border-radius: 60px; text-align: center; caption-side: bottom;">
+            <caption style="display: inline-block; ">
+              <p style="text-align: center;">  
+                <a style="color: black;" href="https://personal.ntu.edu.sg/hanwangzhang/">Hanwang <br />Zhang</a>
+              </p> 
+            </caption>
+          </div>
+        </div>
+
+
+        <div class="col" style="display: inline-block; width: 150px; height: 150px;">
+          <div class="circleImg">
+            <img src="img/Roi Reichart.png" style="border-radius: 60px; text-align: center; caption-side: bottom;">
+            <caption style="display: inline-block; ">
+              <p style="text-align: center;"> 
+                <a style="color: black;" href="https://ie.technion.ac.il/~roiri/">Roi <br />Reichart</a>
+              </p> 
+            </caption>
+          </div>
+        </div>
+
+        <div class="col" style="display: inline-block; width: 150px; height: 150px;">
+          <div class="circleImg">
+            <img src="img/Zhiyuan Liu.png" style="border-radius: 60px; text-align: center; caption-side: bottom;">
+            <caption style="display: inline-block; ">
+              <p style="text-align: center;"> 
+                <a style="color: black;" href="https://nlp.csai.tsinghua.edu.cn/~lzy/">Zhiyuan <br />Liu</a>
+              </p> 
+            </caption>
+          </div>
+        </div>
+
+        
+        <div class="col" style="display: inline-block; width: 150px; height: 150px;">
+          <div class="circleImg">
+            <img src="img/Ziwei Liu.png" style="border-radius: 60px; text-align: center; caption-side: bottom;">
+            <caption style="display: inline-block; ">
+              <p style="text-align: center;"> 
+                <a style="color: black;" href="https://liuziwei7.github.io/">Ziwei <br />Liu</a>
+              </p> 
+            </caption>
+          </div>
+        </div>
+
+
+        <div class="col" style="display: inline-block; width: 150px; height: 150px;">
+          <div class="circleImg">
+            <img src="img/Zeynep Akata.jpg" style="border-radius: 60px; text-align: center; caption-side: bottom;">
+            <caption style="display: inline-block; ">
+              <p style="text-align: center;"> 
+                <a style="color: black;" href="https://www.eml-unitue.de/people/zeynep-akata">Zeynep <br />Akata<a>
+              </p> 
+            </caption>
+          </div>
+        </div>
+
+
+        <div class="col" style="display: inline-block; width: 150px; height: 150px;">
+          <div class="circleImg">
+            <img src="img/Anna Rohrbach.png" style="border-radius: 60px; text-align: center; caption-side: bottom;">
+            <caption style="display: inline-block; ">
+              <p style="text-align: center;"> 
+                <a style="color: black;" href="https://anna-rohrbach.net/">Anna <br />Rohrbach</a>
+              </p> 
+            </caption>
+          </div>
+        </div>
+
+        <div class="col" style="display: inline-block; width: 180px; height: 180px;">
+          <div class="circleImg">
+            <img src="img/Alan Yuille.jpg" style="border-radius: 60px; text-align: center; caption-side: bottom;">
+            <caption style="display: inline-block; ">
+              <p style="text-align: center;">  Alan <br />Yuille</p> 
+            </caption>
+          </div>
+        </div>
+        
+
+        </div>
+
+
+
+
+
+
+
+
+<!-- 
+        <div class="row">
+          <div class="col-xs-12">
+            <h2><b>Contact</b></h2>
+            <p>Please feel free to send any question or comments to:
+              <a href="mailto:zhaojian90@u.nus.edu" style="color: blue;">zhaojian90@u.nus.edu</a>,
+              <a href="mailto:g_wang@foxmail.com" style="color: blue;">g_wang@foxmail.com</a>,
+              <a href="mailto:lijianan@bit.edu.cn" style="color: blue;">lijianan@bit.edu.cn</a>.
+            </p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12">
+            <h2><b>SPONSORS</b></h2>
+            <p style=" text-align:left;margin-top: 30px;">
+               <a class="sponsorsa" href="https://www.oppo.com/cn/"><img src="./img/oppo.png" style=" height:26px" /></a>
+              <a class="sponsorsa" href="http://ai.360.cn"><img src="./img/360.png"
+                  style=" height:45px;margin-left:20px" /></a> 
+              <a class="sponsorsa" href="https://damo.alibaba.com/"><img src="./img/alibaba damo.png"
+                  style=" height:45px;margin-left:20px" /></a>
+              <a class="sponsorsa" href="https://www.antgroup.com/"><img src="./img/ant group.jpg"
+                style=" height:45px;margin-left:20px" /></a>
+                <a class="sponsorsa" href="http://dihuge.com/"><img src="./img/ihuge.jpg"
+                  style=" height:45px;margin-left:20px" /></a>
+              <a class="sponsorsa" href="http://www.thejiangmen.com/"><img src="./img/jiangmen.png"
+                  style=" height:45px;margin-left:20px" /></a>
+              <a class="sponsorsa" href="http://home.baidu.com/"><img src="./img/baidu.png"
+                  style=" height:45px;margin-left:20px" /></a>
+              <a class="sponsorsa" href="https://www.mdpi.com/journal/drones"><img src="./img/Drones.png"
+                  style=" height:45px;margin-left:20px" /></a>
+              <a class="sponsorsa" href="http://jeit.ie.ac.cn/"><img src="./img/JE.png"
+                  style=" height:45px;margin-left:20px" /></a> -->
+            <!-- </p>
+          </div>
+        </div>
+        <p><br /></p>
+      </div>
+    </div>
+    <script type="text/javascript" src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="http://cdn.bootcss.com/bootstrap/3.3.0/js/bootstrap.min.js"></script> --> -->
+</body>
+
+</html>
