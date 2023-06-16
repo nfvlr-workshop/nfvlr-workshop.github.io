@@ -3,622 +3,730 @@
 
 <head>
 
-  <style>
-    .happy{
-      width: 800px;
-      margin: 30px;
-      /* border:solid 1px gray; */
-      overflow: hidden; /* 避免長方框下面顯示不正常 */
+    <style>
+        .happy {
+            width: 800px;
+            margin: 30px;
+            /* border:solid 1px gray; */
+            overflow: hidden; /* 避免長方框下面顯示不正常 */
 
-    }
-    .bdcard{
-      width: 300px;
-      float:left; /* 圖片在左邊 */
-      padding: 20px;
-    }
-    .bdcard img{
-      display: block;
-      width:200px;
-    }
-    .bdtext{
-      float: right;  /* 文字在右邊 */
-      width: 460px;
-      padding: 40px 0px 0px 0px;
-    }
-    .bdtext_cap{
-          width: 430px;
         }
 
-    .circleImg{
-      border: black;
-      border-style: solid;
-      border-radius: 60px;
-      width:120px;
-      height:120px;
+        .bdcard {
+            width: 300px;
+            float: left; /* 圖片在左邊 */
+            padding: 20px;
+        }
 
-}
+        .bdcard img {
+            display: block;
+            width: 200px;
+        }
+
+        .bdtext {
+            float: right; /* 文字在右邊 */
+            width: 460px;
+            padding: 40px 0px 0px 0px;
+        }
+
+        .bdtext_cap {
+            width: 430px;
+        }
+
+        .circleImg {
+            border: black;
+            border-style: solid;
+            border-radius: 60px;
+            width: 120px;
+            height: 120px;
+
+        }
 
 
+    </style>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>New Frontiers in Visual Language Reasoning:
+        Compositionality, Prompts and Causality</title>
+    <meta name="description" content="Catch UAVs that Want to Watch You ---">
 
-  </style>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>New Frontiers in Visual Language Reasoning:
-    Compositionality, Prompts and Causality</title>
-  <meta name="description" content="Catch UAVs that Want to Watch You ---">
+    <!--Open Graph Related Stuff-->
+    <meta property="og:title" content="1st Anti-UAV Challenge"/>
+    <meta property="og:url" content="https://Anti-UAV.github.io/"/>
+    <meta property="og:description" content="Catch UAVs that Want to Watch You ---"/>
+    <meta property="og:site_name" content="Anti-UAV"/>
+    <meta property="og:image" content=""/>
+    <meta property="og:image:url" content=""/>
 
-  <!--Open Graph Related Stuff-->
-  <meta property="og:title" content="1st Anti-UAV Challenge" />
-  <meta property="og:url" content="https://Anti-UAV.github.io/" />
-  <meta property="og:description" content="Catch UAVs that Want to Watch You ---" />
-  <meta property="og:site_name" content="Anti-UAV" />
-  <meta property="og:image" content="" />
-  <meta property="og:image:url" content="" />
-
-  <!-- CSS -->
-  <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
-  <link rel="stylesheet" type="text/css" href="./css/main.css">
-  <link rel="stylesheet" type="text/css" href="./css/animate.min.css">
-  <!--<link rel="stylesheet" type="text/css" href="/css/font-awesome.css">-->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-  <link rel="stylesheet" type="text/css" href="./css/lineabasic.css">
-  <link rel="stylesheet" type="text/css" href="./css/magnific-popup.css">
-  <link rel="stylesheet" type="text/css" href="./css/style.css">
-  <link rel="stylesheet" type="text/css" href=".//home.css">
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="./css/main.css">
+    <link rel="stylesheet" type="text/css" href="./css/animate.min.css">
+    <!--<link rel="stylesheet" type="text/css" href="/css/font-awesome.css">-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="./css/lineabasic.css">
+    <link rel="stylesheet" type="text/css" href="./css/magnific-popup.css">
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <link rel="stylesheet" type="text/css" href=".//home.css">
 
 </head>
 <body>
 
 
-
-
-  <!-- <nav class="navbar">
-    <div class="container">
-      <div class="row">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
-            data-target="#bs-example-navbar-collapse-1">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a target="_blank" href="https://cvpr.thecvf.com/">
-            <img src="./img/CVPR2023logo.png" alt="FOLIO LOGO" style=" height:75px;" />
-          </a>
-        </div>
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-          <ul class="nav navbar-nav navbar-right" style="padding-top:10px;">
-            <li><a href="/">Home</a></li>
-            <li><a href="/schedule">Schedule</a></li>
-            <li><a href="/speakers">Speakers</a></li>
-            <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown">Challenge <span
-                  class="caret"></span></a>
-              <ul class="dropdown-menu">
-                <li><a href="/Evaluate" target="_blank">EVALUATE</a></li>
-                <li><a href="/dataset" target="_blank">DATASET</a></li>
-                <li><a href="/leaderboard" target="_blank">LEADERBOARD</a></li>
-                <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown">LEADERBOARD<span
-                      class="caret"></span></a>
-                  <ul class="dropdown-menu">
-                    <li><a href="/leaderboard" target="_blank">Leaderboard of the 1st Anti-UAV</a></li>
-                    <li><a href="/leaderboard2" target="_blank">Leaderboard of the 2nd Anti-UAV</a></li>
-                    <li><a href="/leaderboard3" target="_blank">Leaderboard of the 3rd Anti-UAV</a></li>
-                  </ul>
-                </li>
-              </ul>
-            </li>
-            <li><a href="/submission">Submission</a></li>
-            <li><a href="/organizers">Organizers</a></li>
-          </ul>
-        </div>
+<!-- <nav class="navbar">
+  <div class="container">
+    <div class="row">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+          data-target="#bs-example-navbar-collapse-1">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a target="_blank" href="https://cvpr.thecvf.com/">
+          <img src="./img/CVPR2023logo.png" alt="FOLIO LOGO" style=" height:75px;" />
+        </a>
+      </div>
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav navbar-right" style="padding-top:10px;">
+          <li><a href="/">Home</a></li>
+          <li><a href="/schedule">Schedule</a></li>
+          <li><a href="/speakers">Speakers</a></li>
+          <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown">Challenge <span
+                class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="/Evaluate" target="_blank">EVALUATE</a></li>
+              <li><a href="/dataset" target="_blank">DATASET</a></li>
+              <li><a href="/leaderboard" target="_blank">LEADERBOARD</a></li>
+              <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown">LEADERBOARD<span
+                    class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="/leaderboard" target="_blank">Leaderboard of the 1st Anti-UAV</a></li>
+                  <li><a href="/leaderboard2" target="_blank">Leaderboard of the 2nd Anti-UAV</a></li>
+                  <li><a href="/leaderboard3" target="_blank">Leaderboard of the 3rd Anti-UAV</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li><a href="/submission">Submission</a></li>
+          <li><a href="/organizers">Organizers</a></li>
+        </ul>
       </div>
     </div>
-  </nav> -->
+  </div>
+</nav> -->
 
-  <div class="container">
+<div class="container">
     <div class="page-content">
 
-      <p><br /></p>
-      <style type="text/css">
-        * {
-          margin: 0px;
-          padding: 0px;
-        }
+        <p><br/></p>
+        <style type="text/css">
+            * {
+                margin: 0px;
+                padding: 0px;
+            }
 
-        div {
-          position: relative;
-        }
+            div {
+                position: relative;
+            }
 
-        div w {
-          position: absolute;
-          right: 40px;
-          top: 60px;
-          color: white;
-        }
-      </style>
-      <div>
-        <img src="./img/bgc.jpg" style="width:100%; min-height:200px;" />
-        <font size="6"><strong>
-            <w style="line-height:0.8; text-align: right; margin-top: 392px; margin-left: 50px; margin-right: 50px">
-              New
-              Frontiers in Visual Language Reasoning:<pr /></w>
-          </strong></font>
+            div w {
+                position: absolute;
+                right: 40px;
+                top: 60px;
+                color: white;
+            }
+        </style>
+        <div>
+            <img src="./img/bgc.jpg" style="width:100%; min-height:200px;"/>
+            <font size="6"><strong>
+                <w style="line-height:0.8; text-align: right; margin-top: 392px; margin-left: 50px; margin-right: 50px">
+                    New
+                    Frontiers in Visual Language Reasoning:
+                    <pr/>
+                </w>
+            </strong></font>
 
-        <font size="8"><strong>
-          <w style="line-height:0.8; text-align: center; margin-top: 400px"><br> Compositionality, Prompts and Causality <br /></w>
-        </strong></font>
+            <font size="8"><strong>
+                <w style="line-height:0.8; text-align: center; margin-top: 400px"><br> Compositionality, Prompts and
+                    Causality <br/></w>
+            </strong></font>
 
-        <font size="6">
-          <w style="margin-top: 382px"><br><br><br><br><br>Morning, Jun 18th, Sun, 2023 CVPR<br /><br /><br /><br /><br /></w>
-        </font>
-
-      </div>
-      <p><br /></p>
-
-
-      <div class="row">
-        <div class="col-xs-12">
-            <p> Recent years have seen the stunning powers of Visual Language Pre-training (VLP) models.
-              Although VLPs have revolutionalized some fundamental principles of visual language reasoning (VLR),
-              the other remaining problems prevent them from “thinking” like a human being:
-              how to reason the world from breaking into parts (compositionality),
-              how to achieve the generalization towards novel concepts provided a glimpse of demonstrations in context (prompts),
-              and how to debias visual language reasoning by imagining what would have happened in the counterfactual scenarios (causality).
-            </p>
-
-            <p>
-              The workshop provides the opportunity to gather researchers from different fields to review the technology trends of the three lines,
-              to better endow VLPs with these reasoning abilities. Our workshop also consists of two multi-modal reasoning challenges under the backgrounds of cross-modal math-word calculation and proving problems. </strong>
-              The challenges are practical and highly involved with our issues, therefore, shedding more insights into the new frontiers of visual language reasoning.
-            </p>
+            <font size="6">
+                <w style="margin-top: 382px"><br><br><br><br><br>Morning, Jun 18th, Sun, 2023
+                    CVPR<br/><br/><br/><br/><br/></w>
+            </font>
 
         </div>
-      </div>
-
-      <div class="row">
-        <div class="col-xs-12">
-          <h2><b>Topics</b></h2>
-        </div>
-      </div>
-
-      <p><br /></p>
-      <style type="text/css">
-        * {
-          margin: 0px;
-          padding: 0px;
-        }
-
-        div {
-          position: relative;
-        }
-
-        div w {
-          position: absolute;
-          right: 40px;
-          top: 60px;
-          color: white;
-        }
-      </style>
-      <div>
-        <img src="./img/vl_topics.jpeg" style="width:100%; min-height:200px" />
-      </div>
-      <p><br /></p>
+        <p><br/></p>
 
 
-      <!-- <div class="row">
-        <div class="col-xs-12">
-          <h2><b>Topics</b></h2>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-xs-12">
-          <ul style=“list-style-type:square”><font size="4">
-            <b><li style="margin-left: 20px;"> Large-scale visual-language pretraining (VLP) and reasoning (VLR).</li></b>
-            <br>
-            <b><li style="margin-left: 20px;"> How VLP and VLR are connected with compositionality, prompts and causality. </li></b>
-            <br>
-            <b><li style="margin-left: 20px;"> Causal inference theory, algorithms and models applied for vision-language. </li></b>
-            <br>
-            <b><li style="margin-left: 20px;"> Prompt engineering, tuning and other prompting methods for vision-language. </li></b>
-            <br>
-            <b><li style="margin-left: 20px;"> Compositional representation learning for vision-language. </li></b>
-            <br>
-            <b><li style="margin-left: 20px;"> The relationships and interplay among compositionality, prompts and causalit. </li></b>
-            <br>
-            <b><li style="margin-left: 20px;"> New benchmarks that evaluate vision-language reasoning in terms of compositionality and causality. </li></b>
-
-          </font></ul>
-        </div>
-      </div>
-      <p><br /></p> -->
-      <div class="row">
-        <div class="col-xs-12">
-
-          <div class="row" id="call">
+        <div class="row">
             <div class="col-xs-12">
-              <br /><br /><br />
-              <h1><b>Call for Papers</b></h1>
-            </div>
-          </div>
+                <p> Recent years have seen the stunning powers of Visual Language Pre-training (VLP) models.
+                    Although VLPs have revolutionalized some fundamental principles of visual language reasoning (VLR),
+                    the other remaining problems prevent them from “thinking” like a human being:
+                    how to reason the world from breaking into parts (compositionality),
+                    how to achieve the generalization towards novel concepts provided a glimpse of demonstrations in
+                    context (prompts),
+                    and how to debias visual language reasoning by imagining what would have happened in the
+                    counterfactual scenarios (causality).
+                </p>
 
-          <p>
-            This workshop pays more attention to their limitations of existing notions on <strong>Compositionality,
-            Prompts, and Causality</strong>. In the sense of visual language reasoning, <strong>compositionality</strong> demonstrates how human represents and organizes visual events for reasoning
-            better; <strong>prompt-based methods</strong> build a cross-modal bridge to leverage a large language model for reasoning on new visual
-            concepts in a vocabulary; and <strong>causality</strong> prevents the chain of reasoning from spurious features and other confounding factors. They are very important whereas have seldom been
-            investigated together and worked out in VLPs, <strong>covering a non-exhaustive list of topics</strong> such as:
-          </p>
+                <p>
+                    The workshop provides the opportunity to gather researchers from different fields to review the
+                    technology trends of the three lines,
+                    to better endow VLPs with these reasoning abilities. Our workshop also consists of two multi-modal
+                    reasoning challenges under the backgrounds of cross-modal math-word calculation and proving
+                    problems. </strong>
+                    The challenges are practical and highly involved with our issues, therefore, shedding more insights
+                    into the new frontiers of visual language reasoning.
+                </p>
+
+            </div>
         </div>
-      </div>
-      <div class="row", style="margin-left: auto; margin-top: -40px;">
-        <p>
-        <ul>
-          <li class='uili'> Large-scale visual-language pretraining (VLP) models, visual-language representation learning and reasoning (VLR) (Especially, how VLP and VLR are connected with compositionality, prompts and causality);</li>
-          <li class='uili'> Causal inference theory, algorithms and models applied for vision, language, and vision-language area;</li>
-          <li class='uili'> Prompt engineering, tuning and other prompting methods for vision, language, and vision-language area;</li>
-          <li class='uili'> Compositional representation learning for vision, language, and vision-language area;</li>
-          <li class='uili'> The relationships and interplay among compositionality, prompts and causality;</li>
-          <li class='uili'> New benchmarks that evaluate vision-language reasoning in terms of compositionality and causality</li>
-        </ul>
 
-        </p>
-      </div>
-
-          <div class="row">
+        <div class="row">
             <div class="col-xs-12">
-              <p>
-                Our submission includes the regular-paper track and the long-paper track. CVPR officially does not allow regular workshop papers with more than 4 pages. To this end, our long-paper accepts the submitted manuscripts with more than 4 pages, and supplementary materials are also allowed in the long-paper track. Regular papers are submitted via the CMT paper submission website,
-              <br>
-              <strong>Regular-paper track:</strong> <a style="color: blue;" href="https://cmt3.research.microsoft.com/NFVLR2023">https://cmt3.research.microsoft.com/NFVLR2023</a>
-              <br>
-              </p>
-
-              <table style="margin: 0 auto; width: 100%; line-height: 2;">
-                <thead>
-                  <tr style="background-color: lightblue;">
-                    <th style="padding-left: 20px;">Workshop Event</th>
-                    <th style="padding-left: 20px;">Date</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td style="padding-left: 20px;">Submission Deadline</td>
-                    <td style="padding-left: 20px;">April 10, 2023 (11:59PM EDT)</td>
-                  </tr>
-                  <tr style="background-color: #f2f2f2;">
-                    <td style="padding-left: 20px;">Notification of Acceptance</td>
-                    <td style="padding-left: 20px;">April 12, 2023 (11:59PM EDT)</td>
-                  </tr>
-                  <tr>
-                    <td style="padding-left: 20px;">Camera-Ready Submission Deadline Due</td>
-                    <td style="padding-left: 20px;">April 14, 2023 (11:59PM EDT)</td>
-                  </tr>
-                </tbody>
-              </table>
-
-              <p>
-              <br>
-              <strong>Long-paper track:</strong>
-                <a style="color: blue;" href="https://openreview.net/group?id=thecvf.com/CVPR/2023/Workshop/NFVLR">https://openreview.net/group?id=thecvf.com/CVPR/2023/Workshop/NFVLR</a>  <br>
-              Long papers are submitted via the openreview system. Note that, only regular papers would be selected to publish in IEEE Xplore and the CVF open-access archive.
-              </p>
-
-
-              <table style="margin: 0 auto; width: 100%; line-height: 2;">
-                <thead>
-                  <tr style="background-color: lightgreen;">
-                    <th style="padding-left: 20px;">Workshop Event</th>
-                    <th style="padding-left: 20px;">Date</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td style="padding-left: 20px;">Submission Deadline</td>
-                    <td style="padding-left: 20px;">May 24, 2023 (Extended)</td>
-                  </tr>
-                  <tr style="background-color: #f2f2f2;">
-                    <td style="padding-left: 20px;">Notification of Acceptance</td>
-                    <td style="padding-left: 20px;">June 5, 2023 (Extended)</td>
-                  </tr>
-                  <tr>
-                    <td style="padding-left: 20px;">Camera-Ready Submission Deadline Due</td>
-                    <td style="padding-left: 20px;">June 8, 2023 (Extended)</td>
-                  </tr>
-                </tbody>
-              </table>
-              <br><br>
+                <h2><b>Topics</b></h2>
             </div>
+        </div>
 
-          </div>
+        <p><br/></p>
+        <style type="text/css">
+            * {
+                margin: 0px;
+                padding: 0px;
+            }
 
+            div {
+                position: relative;
+            }
 
-
-
-
-
-          </div>
-
-          </div>
-
-
-
+            div w {
+                position: absolute;
+                right: 40px;
+                top: 60px;
+                color: white;
+            }
+        </style>
+        <div>
+            <img src="./img/vl_topics.jpeg" style="width:100%; min-height:200px"/>
+        </div>
+        <p><br/></p>
 
 
         <!-- <div class="row">
-          <div class="col-md-12">
-            <img src="img/Fig1.png" />
+          <div class="col-xs-12">
+            <h2><b>Topics</b></h2>
           </div>
-        </div>
-        <p style="text-align: center">Figure 1 Examples of UAV-related incidents.</p>
-        <p><br /></p>
-
-        <div class="row">
-          <div class="col-md-12">
-            <img src="img/Figure2.jpg" />
-          </div>
-        </div>
-        <p style="text-align: center">Figure 2 A map illustrating the worldwide drone incidents (courtesy of Dedrone®).</p>
-        <p><br /></p>
-
-        <div class="grade">
-          <span class='span1'>a</span>
-          <span class='span2'>b</span>
-          <span class='span3'>c</span>
         </div>
         <div class="row">
-          <div class="col-md-12">
-            <img src="1.png" />
-          </div>
-        </div>
-        <p style="text-align: center">Figure 3 Illustrations of civil UAVs. (a) Large civil UAV; (b) Small civil UAV;
-          (c) Tiny civil UAV.</p>
-        <p><br /></p>
+          <div class="col-xs-12">
+            <ul style=“list-style-type:square”><font size="4">
+              <b><li style="margin-left: 20px;"> Large-scale visual-language pretraining (VLP) and reasoning (VLR).</li></b>
+              <br>
+              <b><li style="margin-left: 20px;"> How VLP and VLR are connected with compositionality, prompts and causality. </li></b>
+              <br>
+              <b><li style="margin-left: 20px;"> Causal inference theory, algorithms and models applied for vision-language. </li></b>
+              <br>
+              <b><li style="margin-left: 20px;"> Prompt engineering, tuning and other prompting methods for vision-language. </li></b>
+              <br>
+              <b><li style="margin-left: 20px;"> Compositional representation learning for vision-language. </li></b>
+              <br>
+              <b><li style="margin-left: 20px;"> The relationships and interplay among compositionality, prompts and causalit. </li></b>
+              <br>
+              <b><li style="margin-left: 20px;"> New benchmarks that evaluate vision-language reasoning in terms of compositionality and causality. </li></b>
 
-        <div class="row">
-          <div class="col-md-12">
-            <img src="img/Figure4.jpg" />
+            </font></ul>
           </div>
         </div>
-        <p style="text-align: center">Figure 4 Examples of backgrounds and targets in the dataset.</p>
         <p><br /></p> -->
+        <div class="row">
+            <div class="col-xs-12">
 
-        <!-- <p><br /></p> -->
-        <div style="text-align: center;">
-        <div class="row" id="org">
-          <div class="col-xs-12">
-            <br /><br />
+                <div class="row" id="call">
+                    <div class="col-xs-12">
+                        <br/><br/><br/>
+                        <h1><b>Call for Papers</b></h1>
+                    </div>
+                </div>
+
+                <p>
+                    This workshop pays more attention to their limitations of existing notions on <strong>Compositionality,
+                    Prompts, and Causality</strong>. In the sense of visual language reasoning,
+                    <strong>compositionality</strong> demonstrates how human represents and organizes visual events for
+                    reasoning
+                    better; <strong>prompt-based methods</strong> build a cross-modal bridge to leverage a large
+                    language model for reasoning on new visual
+                    concepts in a vocabulary; and <strong>causality</strong> prevents the chain of reasoning from
+                    spurious features and other confounding factors. They are very important whereas have seldom been
+                    investigated together and worked out in VLPs, <strong>covering a non-exhaustive list of
+                    topics</strong> such as:
+                </p>
+            </div>
+        </div>
+        <div class="row" , style="margin-left: auto; margin-top: -40px;">
+            <p>
+            <ul>
+                <li class='uili'> Large-scale visual-language pretraining (VLP) models, visual-language representation
+                    learning and reasoning (VLR) (Especially, how VLP and VLR are connected with compositionality,
+                    prompts and causality);
+                </li>
+                <li class='uili'> Causal inference theory, algorithms and models applied for vision, language, and
+                    vision-language area;
+                </li>
+                <li class='uili'> Prompt engineering, tuning and other prompting methods for vision, language, and
+                    vision-language area;
+                </li>
+                <li class='uili'> Compositional representation learning for vision, language, and vision-language
+                    area;
+                </li>
+                <li class='uili'> The relationships and interplay among compositionality, prompts and causality;</li>
+                <li class='uili'> New benchmarks that evaluate vision-language reasoning in terms of compositionality
+                    and causality
+                </li>
+            </ul>
+
+            </p>
+        </div>
+
+        <div class="row">
+            <div class="col-xs-12">
+                <p>
+                    Our submission includes the regular-paper track and the long-paper track. CVPR officially does not
+                    allow regular workshop papers with more than 4 pages. To this end, our long-paper accepts the
+                    submitted manuscripts with more than 4 pages, and supplementary materials are also allowed in the
+                    long-paper track. Regular papers are submitted via the CMT paper submission website,
+                    <br>
+                    <strong>Regular-paper track:</strong> <a style="color: blue;"
+                                                             href="https://cmt3.research.microsoft.com/NFVLR2023">https://cmt3.research.microsoft.com/NFVLR2023</a>
+                    <br>
+                </p>
+
+                <table style="margin: 0 auto; width: 100%; line-height: 2;">
+                    <thead>
+                    <tr style="background-color: lightblue;">
+                        <th style="padding-left: 20px;">Workshop Event</th>
+                        <th style="padding-left: 20px;">Date</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td style="padding-left: 20px;">Submission Deadline</td>
+                        <td style="padding-left: 20px;">April 10, 2023 (11:59PM EDT)</td>
+                    </tr>
+                    <tr style="background-color: #f2f2f2;">
+                        <td style="padding-left: 20px;">Notification of Acceptance</td>
+                        <td style="padding-left: 20px;">April 12, 2023 (11:59PM EDT)</td>
+                    </tr>
+                    <tr>
+                        <td style="padding-left: 20px;">Camera-Ready Submission Deadline Due</td>
+                        <td style="padding-left: 20px;">April 14, 2023 (11:59PM EDT)</td>
+                    </tr>
+                    </tbody>
+                </table>
+
+                <p>
+                    <br>
+                    <strong>Long-paper track:</strong>
+                    <a style="color: blue;" href="https://openreview.net/group?id=thecvf.com/CVPR/2023/Workshop/NFVLR">https://openreview.net/group?id=thecvf.com/CVPR/2023/Workshop/NFVLR</a>
+                    <br>
+                    Long papers are submitted via the openreview system. Note that, only regular papers would be
+                    selected to publish in IEEE Xplore and the CVF open-access archive.
+                </p>
+
+
+                <table style="margin: 0 auto; width: 100%; line-height: 2;">
+                    <thead>
+                    <tr style="background-color: lightgreen;">
+                        <th style="padding-left: 20px;">Workshop Event</th>
+                        <th style="padding-left: 20px;">Date</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td style="padding-left: 20px;">Submission Deadline</td>
+                        <td style="padding-left: 20px;">May 24, 2023 (Extended)</td>
+                    </tr>
+                    <tr style="background-color: #f2f2f2;">
+                        <td style="padding-left: 20px;">Notification of Acceptance</td>
+                        <td style="padding-left: 20px;">June 5, 2023 (Extended)</td>
+                    </tr>
+                    <tr>
+                        <td style="padding-left: 20px;">Camera-Ready Submission Deadline Due</td>
+                        <td style="padding-left: 20px;">June 8, 2023 (Extended)</td>
+                    </tr>
+                    </tbody>
+                </table>
+                <br><br>
+            </div>
+
+        </div>
+
+
+    </div>
+
+</div>
+
+
+<!-- <div class="row">
+  <div class="col-md-12">
+    <img src="img/Fig1.png" />
+  </div>
+</div>
+<p style="text-align: center">Figure 1 Examples of UAV-related incidents.</p>
+<p><br /></p>
+
+<div class="row">
+  <div class="col-md-12">
+    <img src="img/Figure2.jpg" />
+  </div>
+</div>
+<p style="text-align: center">Figure 2 A map illustrating the worldwide drone incidents (courtesy of Dedrone®).</p>
+<p><br /></p>
+
+<div class="grade">
+  <span class='span1'>a</span>
+  <span class='span2'>b</span>
+  <span class='span3'>c</span>
+</div>
+<div class="row">
+  <div class="col-md-12">
+    <img src="1.png" />
+  </div>
+</div>
+<p style="text-align: center">Figure 3 Illustrations of civil UAVs. (a) Large civil UAV; (b) Small civil UAV;
+  (c) Tiny civil UAV.</p>
+<p><br /></p>
+
+<div class="row">
+  <div class="col-md-12">
+    <img src="img/Figure4.jpg" />
+  </div>
+</div>
+<p style="text-align: center">Figure 4 Examples of backgrounds and targets in the dataset.</p>
+<p><br /></p> -->
+
+<!-- <p><br /></p> -->
+<div style="text-align: center;">
+    <div class="row" id="org">
+        <div class="col-xs-12">
+            <br/><br/>
             <h1><b>Organizers</b></h1>
-            <br /><br />
-          </div>
+            <br/><br/>
         </div>
+    </div>
 
 
-
-        <div class="row" id="org" style="margin-left: 80px;">
+    <div class="row" id="org" style="margin-left: 80px;">
 
 
         <div class="col" style="display: inline-block; width: 150px; height: 150px;">
-          <div class="circleImg">
-            <img src="img/Liang Lin.jpg" style="border-radius: 60px; text-align: center; caption-side: bottom;">
-            <caption style="display: inline-block; ">
-              <p style="text-align: center;"> Liang <br />Lin</p>
-            </caption>
-          </div>
+            <div class="circleImg">
+                <img src="img/Liang Lin.jpg" style="border-radius: 60px; text-align: center; caption-side: bottom;">
+                <caption style="display: inline-block; ">
+                    <p style="text-align: center;"> Liang <br/>Lin</p>
+                </caption>
+            </div>
         </div>
 
         <div class="col" style="display: inline-block; width: 150px; height: 150px;">
-          <div class="circleImg">
-            <img src="img/Vicente Ordonez.jpeg" style="border-radius: 60px; text-align: center; caption-side: bottom;">
-            <caption style="display: inline-block; text-align: center;">
-              <p style="text-align: center;"> Vicente <br />Ordonez</p>
-            </caption>
+            <div class="circleImg">
+                <img src="img/Vicente Ordonez.jpeg"
+                     style="border-radius: 60px; text-align: center; caption-side: bottom;">
+                <caption style="display: inline-block; text-align: center;">
+                    <p style="text-align: center;"> Vicente <br/>Ordonez</p>
+                </caption>
 
-            <!-- <div class="text" style="text-align: center; width: 20px;">
-              <p> </p>
-            </div> -->
+                <!-- <div class="text" style="text-align: center; width: 20px;">
+                  <p> </p>
+                </div> -->
 
-          </div>
-        </div>
-
-
-        <div class="col" style="display: inline-block; width: 150px; height: 150px;">
-          <div class="circleImg">
-            <img src="img/Guangrun Wang.jpg" style="border-radius: 60px; text-align: center; caption-side: bottom;">
-            <caption style="display: inline-block; ">
-              <p style="text-align: center;"> Guangrun <br />Wang</p>
-            </caption>
-
-          </div>
+            </div>
         </div>
 
 
         <div class="col" style="display: inline-block; width: 150px; height: 150px;">
-          <div class="circleImg">
-            <img src="img/Ziliang Chen.jpg" style="border-radius: 60px; text-align: center; caption-side: bottom;">
-            <caption style="display: inline-block; ">
-              <p style="text-align: center;"> Ziliang <br />Chen</p>
-            </caption>
-          </div>
+            <div class="circleImg">
+                <img src="img/Guangrun Wang.jpg" style="border-radius: 60px; text-align: center; caption-side: bottom;">
+                <caption style="display: inline-block; ">
+                    <p style="text-align: center;"> Guangrun <br/>Wang</p>
+                </caption>
+
+            </div>
         </div>
 
 
         <div class="col" style="display: inline-block; width: 150px; height: 150px;">
-          <div class="circleImg">
-            <img src="img/Hao Wang.jpeg" style="border-radius: 60px; text-align: center; caption-side: bottom;">
-            <caption style="display: inline-block; ">
-              <p style="text-align: center;"> Hao <br />Wang</p>
-            </caption>
-          </div>
-        </div>
-
-        <div class="col" style="display: inline-block; width: 150px; height: 150px;">
-          <div class="circleImg">
-            <img src="img/Tianlu Wang.jpeg" style="border-radius: 60px; text-align: center; caption-side: bottom;">
-            <caption style="display: inline-block; ">
-              <p style="text-align: center;"> Tianlu <br />Wang</p>
-            </caption>
-          </div>
+            <div class="circleImg">
+                <img src="img/Ziliang Chen.jpg" style="border-radius: 60px; text-align: center; caption-side: bottom;">
+                <caption style="display: inline-block; ">
+                    <p style="text-align: center;"> Ziliang <br/>Chen</p>
+                </caption>
+            </div>
         </div>
 
 
         <div class="col" style="display: inline-block; width: 150px; height: 150px;">
-          <div class="circleImg">
-            <img src="img/Xiaodan Liang.jpg" style="border-radius: 60px; text-align: center; caption-side: bottom;">
-            <caption style="display: inline-block; ">
-              <p style="text-align: center;"> Xiaodan <br />Liang</p>
-            </caption>
-          </div>
+            <div class="circleImg">
+                <img src="img/Hao Wang.jpeg" style="border-radius: 60px; text-align: center; caption-side: bottom;">
+                <caption style="display: inline-block; ">
+                    <p style="text-align: center;"> Hao <br/>Wang</p>
+                </caption>
+            </div>
+        </div>
+
+        <div class="col" style="display: inline-block; width: 150px; height: 150px;">
+            <div class="circleImg">
+                <img src="img/Tianlu Wang.jpeg" style="border-radius: 60px; text-align: center; caption-side: bottom;">
+                <caption style="display: inline-block; ">
+                    <p style="text-align: center;"> Tianlu <br/>Wang</p>
+                </caption>
+            </div>
         </div>
 
 
         <div class="col" style="display: inline-block; width: 150px; height: 150px;">
-          <div class="circleImg">
-            <img src="img/Alan Yuille.jpg" style="border-radius: 60px; text-align: center; caption-side: bottom;">
-            <caption style="display: inline-block; ">
-              <p style="text-align: center;">  Alan <br />Yuille</p>
-            </caption>
-          </div>
+            <div class="circleImg">
+                <img src="img/Xiaodan Liang.jpg" style="border-radius: 60px; text-align: center; caption-side: bottom;">
+                <caption style="display: inline-block; ">
+                    <p style="text-align: center;"> Xiaodan <br/>Liang</p>
+                </caption>
+            </div>
         </div>
 
+
+        <div class="col" style="display: inline-block; width: 150px; height: 150px;">
+            <div class="circleImg">
+                <img src="img/Alan Yuille.jpg" style="border-radius: 60px; text-align: center; caption-side: bottom;">
+                <caption style="display: inline-block; ">
+                    <p style="text-align: center;"> Alan <br/>Yuille</p>
+                </caption>
+            </div>
         </div>
 
+    </div>
 
 
-
-
-
-
-
-        <div class="row" id="org">
-          <div class="col-xs-12">
-            <br /><br />
+    <div class="row" id="org">
+        <div class="col-xs-12">
+            <br/><br/>
             <h1><b>Invited speakers</b></h1>
-            <br /><br />
-          </div>
+            <br/><br/>
         </div>
+    </div>
 
 
-        <div class="row" id="org" style="margin-left: 80px;">
+    <div class="row" id="org" style="margin-left: 80px;">
         <div class="col" style="display: inline-block; width: 150px; height: 150px;">
-          <div class="circleImg">
-            <img src="img/Elias Bareinboim.jpeg" style="border-radius: 60px; text-align: center; caption-side: bottom;">
-            <caption style="display: inline-block; text-align: center;">
-              <p style="text-align: center;">
-                <a style="color: black;" href="https://causalai.net/">Elias Bareinboim</a>
-              </p>
-            </caption>
+            <div class="circleImg">
+                <img src="img/Elias Bareinboim.jpeg"
+                     style="border-radius: 60px; text-align: center; caption-side: bottom;">
+                <caption style="display: inline-block; text-align: center;">
+                    <p style="text-align: center;">
+                        <a style="color: black;" href="https://causalai.net/">Elias Bareinboim</a>
+                    </p>
+                </caption>
 
-            <!-- <div class="text" style="text-align: center; width: 20px;">
-              <p>wqeddsadaswdddddddddddddddddsadsadasdewq </p>
-            </div> -->
+                <!-- <div class="text" style="text-align: center; width: 20px;">
+                  <p>wqeddsadaswdddddddddddddddddsadsadasdewq </p>
+                </div> -->
 
-          </div>
-        </div>
-
-
-        <div class="col" style="display: inline-block; width: 150px; height: 150px;">
-          <div class="circleImg">
-            <img src="img/Ranjay Krishna.jpeg" style="border-radius: 60px; text-align: center; caption-side: bottom;">
-            <caption style="display: inline-block; ">
-              <p style="text-align: center;">
-                <a style="color: black;" href="https://ranjaykrishna.com">Ranjay <br />Krishna</a>
-              </p>
-            </caption>
-
-          </div>
+            </div>
         </div>
 
 
         <div class="col" style="display: inline-block; width: 150px; height: 150px;">
-          <div class="circleImg">
-            <img src="img/Hanwang Zhang.jpg" style="border-radius: 60px; text-align: center; caption-side: bottom;">
-            <caption style="display: inline-block; ">
-              <p style="text-align: center;">
-                <a style="color: black;" href="https://personal.ntu.edu.sg/hanwangzhang/">Hanwang <br />Zhang</a>
-              </p>
-            </caption>
-          </div>
-        </div>
+            <div class="circleImg">
+                <img src="img/Ranjay Krishna.jpeg"
+                     style="border-radius: 60px; text-align: center; caption-side: bottom;">
+                <caption style="display: inline-block; ">
+                    <p style="text-align: center;">
+                        <a style="color: black;" href="https://ranjaykrishna.com">Ranjay <br/>Krishna</a>
+                    </p>
+                </caption>
 
-
-<!--         <div class="col" style="display: inline-block; width: 150px; height: 150px;">
-          <div class="circleImg">
-            <img src="img/Roi Reichart.png" style="border-radius: 60px; text-align: center; caption-side: bottom;">
-            <caption style="display: inline-block; ">
-              <p style="text-align: center;">
-                <a style="color: black;" href="https://ie.technion.ac.il/~roiri/">Roi <br />Reichart</a>
-              </p>
-            </caption>
-          </div>
-        </div> -->
-
-<!--         <div class="col" style="display: inline-block; width: 150px; height: 150px;">
-          <div class="circleImg">
-            <img src="img/Zhiyuan Liu.png" style="border-radius: 60px; text-align: center; caption-side: bottom;">
-            <caption style="display: inline-block; ">
-              <p style="text-align: center;">
-                <a style="color: black;" href="https://nlp.csai.tsinghua.edu.cn/~lzy/">Zhiyuan <br />Liu</a>
-              </p>
-            </caption>
-          </div>
-        </div> -->
-
-
-        <div class="col" style="display: inline-block; width: 150px; height: 150px;">
-          <div class="circleImg">
-            <img src="img/Ziwei Liu.png" style="border-radius: 60px; text-align: center; caption-side: bottom;">
-            <caption style="display: inline-block; ">
-              <p style="text-align: center;">
-                <a style="color: black;" href="https://liuziwei7.github.io/">Ziwei <br />Liu</a>
-              </p>
-            </caption>
-          </div>
+            </div>
         </div>
 
 
         <div class="col" style="display: inline-block; width: 150px; height: 150px;">
-          <div class="circleImg">
-            <img src="img/Zeynep Akata.jpg" style="border-radius: 60px; text-align: center; caption-side: bottom;">
-            <caption style="display: inline-block; ">
-              <p style="text-align: center;">
-                <a style="color: black;" href="https://www.eml-unitue.de/people/zeynep-akata">Zeynep <br />Akata<a>
-              </p>
-            </caption>
-          </div>
+            <div class="circleImg">
+                <img src="img/Hanwang Zhang.jpg" style="border-radius: 60px; text-align: center; caption-side: bottom;">
+                <caption style="display: inline-block; ">
+                    <p style="text-align: center;">
+                        <a style="color: black;" href="https://personal.ntu.edu.sg/hanwangzhang/">Hanwang <br/>Zhang</a>
+                    </p>
+                </caption>
+            </div>
+        </div>
+
+
+        <!--         <div class="col" style="display: inline-block; width: 150px; height: 150px;">
+                  <div class="circleImg">
+                    <img src="img/Roi Reichart.png" style="border-radius: 60px; text-align: center; caption-side: bottom;">
+                    <caption style="display: inline-block; ">
+                      <p style="text-align: center;">
+                        <a style="color: black;" href="https://ie.technion.ac.il/~roiri/">Roi <br />Reichart</a>
+                      </p>
+                    </caption>
+                  </div>
+                </div> -->
+
+        <!--         <div class="col" style="display: inline-block; width: 150px; height: 150px;">
+                  <div class="circleImg">
+                    <img src="img/Zhiyuan Liu.png" style="border-radius: 60px; text-align: center; caption-side: bottom;">
+                    <caption style="display: inline-block; ">
+                      <p style="text-align: center;">
+                        <a style="color: black;" href="https://nlp.csai.tsinghua.edu.cn/~lzy/">Zhiyuan <br />Liu</a>
+                      </p>
+                    </caption>
+                  </div>
+                </div> -->
+
+
+        <div class="col" style="display: inline-block; width: 150px; height: 150px;">
+            <div class="circleImg">
+                <img src="img/Ziwei Liu.png" style="border-radius: 60px; text-align: center; caption-side: bottom;">
+                <caption style="display: inline-block; ">
+                    <p style="text-align: center;">
+                        <a style="color: black;" href="https://liuziwei7.github.io/">Ziwei <br/>Liu</a>
+                    </p>
+                </caption>
+            </div>
         </div>
 
 
         <div class="col" style="display: inline-block; width: 150px; height: 150px;">
-          <div class="circleImg">
-            <img src="img/Anna Rohrbach.png" style="border-radius: 60px; text-align: center; caption-side: bottom;">
-            <caption style="display: inline-block; ">
-              <p style="text-align: center;">
-                <a style="color: black;" href="https://anna-rohrbach.net/">Anna <br />Rohrbach</a>
-              </p>
-            </caption>
-          </div>
+            <div class="circleImg">
+                <img src="img/Zeynep Akata.jpg" style="border-radius: 60px; text-align: center; caption-side: bottom;">
+                <caption style="display: inline-block; ">
+                    <p style="text-align: center;">
+                        <a style="color: black;" href="https://www.eml-unitue.de/people/zeynep-akata">Zeynep
+                            <br/>Akata<a>
+                    </p>
+                </caption>
+            </div>
+        </div>
+
+
+        <div class="col" style="display: inline-block; width: 150px; height: 150px;">
+            <div class="circleImg">
+                <img src="img/Anna Rohrbach.png" style="border-radius: 60px; text-align: center; caption-side: bottom;">
+                <caption style="display: inline-block; ">
+                    <p style="text-align: center;">
+                        <a style="color: black;" href="https://anna-rohrbach.net/">Anna <br/>Rohrbach</a>
+                    </p>
+                </caption>
+            </div>
         </div>
 
         <div class="col" style="display: inline-block; width: 180px; height: 180px;">
-          <div class="circleImg">
-            <img src="img/Alan Yuille.jpg" style="border-radius: 60px; text-align: center; caption-side: bottom;">
-            <caption style="display: inline-block; ">
-              <p style="text-align: center;">  Alan <br />Yuille</p>
-            </caption>
-          </div>
+            <div class="circleImg">
+                <img src="img/Alan Yuille.jpg" style="border-radius: 60px; text-align: center; caption-side: bottom;">
+                <caption style="display: inline-block; ">
+                    <p style="text-align: center;"> Alan <br/>Yuille</p>
+                </caption>
+            </div>
         </div>
 
 
+    </div>
+
+    <div class="row" id="org">
+        <div class="col-xs-12">
+            <br/><br/>
+            <h1><b>Program</b></h1>
+            <br/><br/>
         </div>
+    </div>
 
-        </div>
+    <table>
+        <tr>
+            <th>Time</th>
+            <th>Speaker</th>
+            <th>In-person/virtual</th>
+            <th>Topics</th>
+            <th>Notes</th>
+        </tr>
+        <tr>
+            <td>Openning(9:15am-9:30am)</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>9:30am-10:15am</td>
+            <td>Zeynep Akata</td>
+            <td>Virtual</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>10:15am-11:00am</td>
+            <td>Elias Bareinboim</td>
+            <td>Virtual</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>11:00am-11:45am</td>
+            <td>Anna Rohrbach</td>
+            <td>In-person</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>11:45am-12:30am</td>
+            <td>Hanwang Zhang</td>
+            <td>In-person</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Lunch break(12:30am-2:15pm)</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>2:15pm-3:00pm</td>
+            <td>Alan Yuille</td>
+            <td>In-person</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>3:00pm-3:45pm</td>
+            <td>Ziwei Liu</td>
+            <td>In-person</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>3:45pm-4:30pm</td>
+            <td>Ranjay Krishna</td>
+            <td>In-person</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>closing remarks(5 minutes)</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
 
 
-
-
+</div>
 
 
 <!--
@@ -653,14 +761,14 @@
                   style=" height:45px;margin-left:20px" /></a>
               <a class="sponsorsa" href="http://jeit.ie.ac.cn/"><img src="./img/JE.png"
                   style=" height:45px;margin-left:20px" /></a> -->
-            <!-- </p>
-          </div>
-        </div>
-        <p><br /></p>
-      </div>
-    </div>
-    <script type="text/javascript" src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
-    <script type="text/javascript" src="http://cdn.bootcss.com/bootstrap/3.3.0/js/bootstrap.min.js"></script> --> -->
+<!-- </p>
+</div>
+</div>
+<p><br /></p>
+</div>
+</div>
+<script type="text/javascript" src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript" src="http://cdn.bootcss.com/bootstrap/3.3.0/js/bootstrap.min.js"></script> --> -->
 </body>
 
 </html>
